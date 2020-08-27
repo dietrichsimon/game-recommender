@@ -1,6 +1,6 @@
 # Board Game Recommender
 
-accessible here: board-game-recommender.herokuapp.com
+Accessible [here](https://board-game-recommender.herokuapp.com/)
 
 ![](recommender_preview_1.gif)
 

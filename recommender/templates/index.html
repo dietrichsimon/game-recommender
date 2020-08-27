@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+{% extends '_base.html' %}
+
+{% block content %}
+
+  <div class="container">
+    <div class="card border-0 shadow my-5">
+      <div class="card-body p-5">
+
+        <br><br>
+        <h3 style="text-align:center" >Welcome to your personal</h3>
+        <br>
+        <h1 style="text-align:center" >Board Game Recommender</h1>
+        <br><br>
+
+        <form action="/results" style="text-align:center">
+          <p>Name {{ num_html }} board games you love:</p>
+
+          <input  type="text"
+                  class="flexdatalist"
+                  name="game1"
+                  placeholder="board game title"
+                  data-data='static/json/game_attributes.json'
+                  data-search-in='Name'
+                  data-value-property='Name'
+                  data-min-length='1'
+                  required>
+
+          <br>
+
+          <input  type="text"
+                  class="flexdatalist"
+                  name="game2"
+                  placeholder="board game title"
+                  data-data='static/json/game_attributes.json'
+                  data-search-in='Name'
+                  data-value-property='Name'
+                  data-min-length='1'
+                  required>
+          <br>
+
+          <input  type="text"
+                  class="flexdatalist"
+                  name="game3"
+                  placeholder="board game title"
+                  data-data='static/json/game_attributes.json'
+                  data-search-in='Name'
+                  data-value-property='Name'
+                  data-min-length='1'
+                  required>
+
+          <br><br>
+          <p>Pick an algorithm:</p>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="algo" id="NMF" value="NMF" checked>
+            <label class="form-check-label" for="NMF">NMF (searches most similar games)</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="algo" id="CoSim" value="CoSim">
+            <label class="form-check-label" for="CoSim">CoSim (searches favorite games of most simalar gamer)</label>
+          </div>
+
+          <br><br>
+
+          <input type="submit" value="Click to submit">
+
+          <br><br>
+
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <link href='/static/css/styles_index.css' rel='stylesheet'>
+  <!-- link to flexdatalist CSS style sheet -->
+  <link href="/static/css/jquery.flexdatalist.min.css" rel="stylesheet" type="text/css">
+  <!-- download the link below for production -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <!-- link to flexdatalist javascript script -->
+  <script src="/static/js/jquery.flexdatalist.min.js"></script>
+
+{% endblock %}

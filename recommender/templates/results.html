@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{% extends '_base.html' %}
+
+  {% block content %}
+
+  <div class="container">
+    <div class="card border-0 shadow my-5">
+      <div class="card-body p-5">
+
+    <h1>You should check out these board games!</h1>
+
+    <ul>
+      {% for m in movies_html %}
+      <li>{{m}}</li>
+      {% endfor %}
+    </ul>
+
+    <a href="/index">Go back home!</a>
+
+        </div>
+      </div>
+    </div>
+
+<link rel='stylesheet' href='/static/css/styles_results.css'>
+
+  {% endblock %}

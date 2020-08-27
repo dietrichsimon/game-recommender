@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Board Game Recommender</title>
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <!-- own css -->
+    <link rel='stylesheet' href='/static/css/styles.css'>
+
+<link rel="shortcut icon" href="/static/img/dice_icon4.png">
+
+  </head>
+  <body>
+    <ul class="nav">
+      <li class="nav-item">
+        <a class="nav-link" href="/index">HOME</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/favorites">ALL TIME FAVORITES</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/worst_of">WORST OF</a>
+      </li>
+    </ul>
+
+    {% block content %}
+
+    {% endblock %}
+
+
+<script src='/static/js/index.js'></script>
+<!-- own css -->
+<link rel='stylesheet' href='/static/css/styles.css'>
+  </body>
+</html>

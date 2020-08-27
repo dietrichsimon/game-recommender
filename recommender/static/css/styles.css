@@ -1,0 +1,33 @@
+/* Set a background image */
+
+/* body {
+  background:url('/static/img/ticket_to_ride.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+} */
+
+.nav {
+  background-color: rgba(44, 62, 80, 1);
+}
+
+.card {
+    color: rgb(189, 195, 199);
+    background-color: rgba(44, 62, 80, 0.9);
+}
+
+.nav-link {
+  color: rgb(189, 195, 199);
+}
+
+/* .submit {
+  margin-top: 10px;
+  background-color:#b58851;
+  border: 1px solid #364954;
+} */
+
+/* .card-body {
+            color: blue;
+            background-color: pink;
+} */

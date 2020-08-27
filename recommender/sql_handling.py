@@ -1,27 +1,24 @@
-from sqlalchemy import create_engine
-from recommender.config import AWS_PW, HOST
-from recommender import config
+'''Connection to database'''
+
 import pandas as pd
-#from config import AWS_PW
+from sqlalchemy import create_engine
+
+from recommender import config
 
 # specify sqlalchemy connection string
-#host = 'spiced.csdsa4ecozd8.eu-central-1.rds.amazonaws.com'
-#user = 'simon'
-host = config.HOST
-user = config.USER
-
-port = '5432'
-#pw = AWS_PW
-pw = config.AWS_PW
-dbname='boardgames'
-conns = f'postgres://{user}:{pw}@{host}:{port}/{dbname}'
+HOST = config.HOST
+USER = config.USER
+PORT = "5432"
+PW = config.AWS_PW
+DBNAME = "boardgames"
+CONNS = f"postgres://{USER}:{PW}@{HOST}:{PORT}/{DBNAME}"
 
 # connect to database
-db = create_engine(conns, encoding='latin1', echo=False)
+DB = create_engine(CONNS, encoding="latin1", echo=False)
 
 # read in db as DataFrame
 def db_to_df(db_table):
-    '''Reads in a table from the board games database as pandas DataFrame'''
+    """Reads in a table from the board games database as pandas DataFrame"""
     query = f"SELECT * FROM {db_table};"
-    pd_table = pd.read_sql(query, db)
+    pd_table = pd.read_sql(query, DB)
     return pd_table

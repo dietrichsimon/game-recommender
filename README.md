@@ -2,7 +2,7 @@
 
 Try it out [here](https://board-game-recommender.herokuapp.com/)
 
-![](recommender_preview_1.gif)
+![](gifs/recommender_preview_1.gif)
 
 
 
@@ -16,7 +16,7 @@ Technologies used: Python, Flask, Pandas, Scikit-learn, SQL, some HTML, JavaScri
 
 Website hosted on heroku (webapp) and AWS (database).
 
-![](recommender_preview_2.gif)
+![](gifs/recommender_preview_2.gif)
 
 
 
